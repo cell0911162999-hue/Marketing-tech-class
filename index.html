@@ -127,14 +127,6 @@ blockquote{margin:0 0 18px;padding:4px 0 4px 18px;border-left:3px solid var(--ac
 .note{font-size:13.5px;color:var(--muted);margin-top:12px}
 .statement{font-size:clamp(19px,2.2vw,24px);line-height:1.7;font-weight:500;max-width:none}
 .statement em{font-style:normal;font-weight:900;border-bottom:2px solid var(--accent)}
-#pmap{width:100%;max-width:480px;height:auto}
-#pmap text{fill:var(--muted);font-size:12px;font-family:"Noto Sans TC",sans-serif}
-#pmap .ax{stroke:var(--muted);stroke-width:1.2}
-#pmap .gridl{stroke:var(--line);stroke-dasharray:3 5}
-#pmap .pt{fill:var(--surface);stroke:var(--muted);stroke-width:2}
-#pmap .pt.me{fill:var(--accent);stroke:var(--accent)}
-#pmap .lbl{fill:var(--text);font-size:13px;font-weight:500}
-#pmap .lbl.me{font-weight:900;font-size:14px}
 .pod{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:18px}
 .pod div{border-top:3px solid var(--accent);background:var(--surface);padding:12px 14px;border-radius:0 0 10px 10px}
 .pod b{display:block;font-size:15px}
@@ -463,7 +455,6 @@ body.slides #lineup .lu-who{margin-top:12px}
 body.slides #lineup .lu-who p{display:none}
 body.slides #pos h2{margin-bottom:10px}
 body.slides #pos .statement{font-size:clamp(17px,1.7vw,21px)}
-body.slides #pos #pmap{max-height:38vh;width:auto;max-width:100%;display:block;margin:0 auto}
 body.slides #pos .pod{margin-top:12px}
 body.slides #pos .vs{margin-top:14px}
 body.slides #pos .vs-h{margin-bottom:8px}
@@ -493,7 +484,6 @@ body.slides #refs .thanks{margin-top:14px}
 :root[data-theme="dark"]{--c-all:#93B086;--c-out:#7DB3D3;--c-top:#D7B072;--c-apl:#AEB8C0}
 .pos-top{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,4vw,48px);align-items:center}
 @media (max-width:900px){.pos-top{grid-template-columns:1fr}}
-.pos-map #pmap{max-width:360px;margin:0 auto;display:block}
 .pk-row{display:flex;flex-wrap:wrap;gap:12px}
 .pk{font:inherit;font-size:clamp(40px,6vw,80px);font-weight:900;line-height:1.1;background:transparent;border:0;border-bottom:5px solid currentColor;padding:4px 6px 8px;cursor:pointer;opacity:.9}
 .pk-all{color:var(--c-all)} .pk-out{color:var(--c-out)} .pk-top{color:var(--c-top)}
@@ -528,7 +518,6 @@ body.slides #refs .thanks{margin-top:14px}
 .concl-a b{font-size:clamp(24px,3vw,38px);font-weight:900}
 .c-apl{color:var(--c-apl)} .c-fen{color:var(--accent)}
 body.slides #pos .pk{font-size:clamp(36px,5vw,64px)}
-body.slides #pos .pos-map #pmap{max-height:34vh;width:auto}
 body.slides #pos .vs2{margin-top:14px}
 .p-photo{display:block;width:100%;height:auto;aspect-ratio:680/601;object-fit:cover}
 .p-car{position:relative}
@@ -907,18 +896,6 @@ body.slides .pv{padding:0!important}
         <div class="pk-row" role="group" aria-label="定位關鍵字"><button type="button" class="pk pk-all" data-k="all" aria-pressed="false">全方位</button><button type="button" class="pk pk-out" data-k="out" aria-pressed="false">戶外</button><button type="button" class="pk pk-top" data-k="top" aria-pressed="false">旗艦</button></div>
         <div class="pk-panels" aria-live="polite"><p class="pk-hint">點擊關鍵字看特點</p><div class="pk-panel pk-all" data-k="all" hidden><p class="pk-line"><span class="nw">跨情境</span><span class="nw">跨項目耐力運動者</span></p></div><div class="pk-panel pk-out" data-k="out" hidden><p class="pk-line"><span class="nw">走得更遠</span><span class="nw">最可靠的冒險夥伴</span></p></div><div class="pk-panel pk-top" data-k="top" hidden><p class="pk-line"><span class="nw">低調奢華</span><span class="nw">高階玩家</span></p></div></div>
       </div>
-      <div class="pos-map"><svg id="pmap" viewBox="0 0 420 420" role="img" aria-label="定位知覺圖：橫軸生活時尚到戶外專業，縱軸價格低到高">
-          <line class="gridl" x1="210" y1="20" x2="210" y2="390"/><line class="gridl" x1="30" y1="205" x2="400" y2="205"/>
-          <line class="ax" x1="30" y1="390" x2="400" y2="390"/><line class="ax" x1="30" y1="390" x2="30" y2="20"/>
-          <text x="400" y="410" text-anchor="end">戶外專業 ▶</text><text x="34" y="410">◀ 生活時尚</text>
-          <text x="40" y="30">價格高</text><text x="40" y="380">價格低</text>
-          <circle class="pt" cx="300" cy="200" r="8"/>
-          <circle class="pt" cx="275" cy="240" r="8"/>
-          <circle class="pt" cx="190" cy="85" r="8"/>
-          <circle class="pt" cx="215" cy="275" r="8"/>
-          <circle class="pt" cx="90" cy="320" r="8"/>
-          <circle class="pt me" cx="355" cy="62" r="11"/>
-        </svg></div>
     </div>
     <div class="pv">
       <b>Play Harder</b>
