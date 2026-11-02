@@ -286,20 +286,14 @@ mark{background:linear-gradient(transparent 50%,color-mix(in srgb,var(--accent) 
 .fb-link{font:inherit;font-weight:700;color:var(--accent);background:none;border:0;border-bottom:2px dashed currentColor;padding:0;cursor:pointer}
 .fb-link::after{content:"＋";margin-left:.2em;font-size:.7em;vertical-align:.15em}
 .fb-link[aria-expanded="true"]::after{content:"－"}
-.fb-note{position:absolute;z-index:3;box-sizing:border-box;background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:22px 26px 20px;box-shadow:0 18px 40px rgba(0,0,0,.18);animation:rvIn .35s ease}
+.fb-note{position:absolute;z-index:3;box-sizing:border-box;width:320px;background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:24px 26px;box-shadow:0 18px 40px rgba(0,0,0,.18);animation:rvIn .35s ease}
 .fb-note[hidden]{display:none}
-.fb-note small{display:block;font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--accent)}
-.fb-note b{display:block;margin:6px 34px 10px 0;font-size:clamp(24px,2vw,32px);font-weight:900;line-height:1.3}
-.fb-note p{margin:0 0 12px;max-width:none;font-size:clamp(17px,1.3vw,21px);font-weight:700;line-height:1.6}
-.fb-note ul{list-style:none;margin:0;padding:0}
-.fb-note li{padding:9px 0;border-top:1px solid var(--line);font-size:clamp(16px,1.2vw,19px);line-height:1.6}
-.fb-note li i{display:block;font-style:normal;font-size:13px;font-weight:700;color:var(--muted)}
-.fb-note .fb-src{margin:10px 0 0;font-size:13px;font-weight:400;color:var(--muted)}
+.fb-note b{display:block;margin:0 30px 12px 0;font-size:clamp(26px,2.2vw,34px);font-weight:900;line-height:1.3;color:var(--accent)}
+.fb-note p{margin:0;max-width:none;font-size:clamp(18px,1.4vw,22px);font-weight:700;line-height:1.6}
 .fb-close{position:absolute;top:10px;right:12px;width:36px;height:36px;border:0;border-radius:50%;background:transparent;color:var(--muted);font-size:24px;line-height:1;cursor:pointer}
 .fb-close:hover{background:var(--surface2)}
-.fb-note::before{content:"";position:absolute;top:var(--ay,40px);width:18px;height:18px;background:var(--surface);transform:rotate(45deg)}
-.fb-note[data-side="right"]::before{left:-11px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent)}
-.fb-note[data-side="left"]::before{right:-11px;border-top:2px solid var(--accent);border-right:2px solid var(--accent)}
+.fb-note::before{content:"";position:absolute;left:-11px;top:var(--ay,40px);width:18px;height:18px;background:var(--surface);border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg)}
+#func.fb-room{padding-right:calc(clamp(20px,6vw,88px) + 344px)}
 .fb-note.inline{position:static;width:100%;max-width:1180px;margin:18px auto 0}
 .fb-note.inline::before{display:none}
 .beat-foot{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:stretch;margin-top:32px}
@@ -782,15 +776,8 @@ body.slides .pv{padding:0!important}
   </div>
   <aside class="fb-note" id="fbNote" aria-label="註釋：Firstbeat 生理演算法" hidden>
     <button type="button" class="fb-close" aria-label="關閉註釋">×</button>
-    <small>註釋｜Firstbeat 生理演算法</small>
     <b>2020 年收購芬蘭 Firstbeat Analytics</b>
-    <p>為用戶提供更先進、精準的健康和運動表現數據</p>
-    <ul>
-      <li><i>它是誰</i>芬蘭的生理數據分析公司，專門把心跳數據轉成看得懂的身體指標</li>
-      <li><i>怎麼做</i>分析心率變異度（HRV），也就是每次心跳間隔的細微變化，推算壓力、疲勞與恢復狀態</li>
-      <li><i>錶上看得到</i>最大攝氧量（VO2 Max）、訓練效果、恢復時間、壓力指數、身體能量指數（Body Battery）</li>
-    </ul>
-    <p class="fb-src">資料來源：Garmin 官方部落格（見參考資料）</p>
+    <p>芬蘭生理數據分析公司，為用戶提供更先進、精準的健康和運動表現數據</p>
   </aside>
 </section>
 
@@ -1093,6 +1080,7 @@ body.slides .pv{padding:0!important}
       <li><div><a href="https://alvinist.com/tech_appliance/news/garmin-fenix-9-fenix-9-pro-taiwan/" target="_blank" rel="noopener">Garmin fēnix 9、fēnix 9 Pro 台灣 9/15 開賣</a><small>Alvinist，inReach 通訊功能</small></div></li>
       <li><div><a href="https://www.rei.com/product/C17315/garmin-fenix-9-pro-solar" target="_blank" rel="noopener">Garmin fēnix 9 Pro Solar（續航規格）</a><small>REI 產品規格頁</small></div></li>
       <li><div><a href="https://www.garmin.com/zh-TW/blog/healthandnews/garmin-purchase-firstbeat/" target="_blank" rel="noopener">Garmin 收購芬蘭生理數據分析公司 Firstbeat Analytics</a><small>Garmin 官方部落格，2020</small></div></li>
+      <li><div><a href="https://www.garmin.com.tw/news/newscenter/news-2020-jul-takeover/" target="_blank" rel="noopener">Garmin 收購 Firstbeat Analytics 新聞稿</a><small>Garmin 台灣新聞中心，2020/7</small></div></li>
       <li><div><a href="https://www.garmin.com.tw/company/about/" target="_blank" rel="noopener">關於 Garmin（品牌定位頁圖片來源）</a><small>Garmin 台灣官網</small></div></li>
     </ol>
     <p class="thanks">謝謝聆聽</p>
@@ -1202,34 +1190,27 @@ body.slides .pv{padding:0!important}
   Array.prototype.slice.call(document.querySelectorAll(".qa")).forEach(function(q){
     q.addEventListener("click", function(){ q.setAttribute("aria-expanded", q.getAttribute("aria-expanded")==="true" ? "false" : "true"); });
   });
-  // Firstbeat note on page 3: sits in the blank margin right of the page when there is room,
-  // otherwise over cards 1-2 pointing at card 3; inline below the cards on narrow screens
+  // Firstbeat note on page 3: always in the blank space right of the page. When the screen is too
+  // narrow for that (wrap 1180px + 320px note + gaps), the page gets extra right padding while it is open.
   var fbLink = document.querySelector(".fb-link"), fbNote = document.getElementById("fbNote");
   function placeFb(){
-    if (!fbNote || fbNote.hidden) return;
-    var sec = fbNote.parentNode, cards = sec.querySelectorAll(".fp-list li"), st = fbNote.style;
-    fbNote.classList.remove("inline"); st.left = st.top = st.width = st.minHeight = "";
-    if (innerWidth < 860){ fbNote.classList.add("inline"); return; }
+    if (!fbNote) return;
+    var sec = fbNote.parentNode, st = fbNote.style, open = !fbNote.hidden, narrow = innerWidth < 860;
+    sec.classList.toggle("fb-room", open && !narrow && innerWidth < 1180 + (320 + 48) * 2);
+    fbNote.classList.toggle("inline", narrow);
+    st.left = st.top = "";
+    if (!open || narrow) return;
     var sr = sec.getBoundingClientRect(), wr = sec.querySelector(".wrap").getBoundingClientRect(),
-        pr = sec.querySelector(".fp-photo img").getBoundingClientRect(),
-        c1 = cards[0].getBoundingClientRect(), c3 = cards[2].getBoundingClientRect(),
-        gap = 24, free = sr.right - wr.right - gap * 2, ox = -sr.left, oy = sec.scrollTop - sr.top, top;
-    if (free >= 300){
-      fbNote.setAttribute("data-side", "right");
-      st.left = (wr.right + gap + ox) + "px"; st.width = Math.min(free, 460) + "px";
-      top = Math.max(pr.top, Math.min(c3.top, c3.bottom - fbNote.offsetHeight));
-    } else {
-      fbNote.setAttribute("data-side", "left");
-      st.left = (c1.left + ox) + "px"; st.width = (c3.left - c1.left - gap) + "px"; st.minHeight = c3.height + "px";
-      top = Math.max(pr.top, c3.bottom - fbNote.offsetHeight);
-    }
-    st.top = (top + oy) + "px";
-    var lr = fbLink.getBoundingClientRect();  // point the arrow at the clicked phrase
-    st.setProperty("--ay", Math.max(24, Math.min(fbNote.offsetHeight - 40, (lr.top + lr.bottom) / 2 - 9 - top)) + "px");
+        pr = sec.querySelector(".fp-photo img").getBoundingClientRect(), lr = fbLink.getBoundingClientRect(),
+        w = fbNote.offsetWidth, h = fbNote.offsetHeight, mid = (lr.top + lr.bottom) / 2,
+        top = Math.max(pr.top, Math.min(mid - h / 2, innerHeight - 96 - h));
+    st.left = (wr.right + (sr.left + sec.clientWidth - wr.right - w) / 2 - sr.left) + "px";
+    st.top = (top - sr.top + sec.scrollTop) + "px";
+    st.setProperty("--ay", Math.max(20, Math.min(h - 38, mid - 9 - top)) + "px");
   }
   function setFb(on){
     fbLink.setAttribute("aria-expanded", on ? "true" : "false");
-    fbNote.hidden = !on; placeFb();
+    fbNote.hidden = !on; placeFb(); refit();
   }
   fbLink.addEventListener("click", function(){ setFb(fbLink.getAttribute("aria-expanded") !== "true"); });
   fbNote.querySelector(".fb-close").addEventListener("click", function(){ setFb(false); fbLink.focus(); });
